@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Camiseta London Black",
+    "preco": 129.90,
+    "categoria": "camiseta"
+  },
+  {
+    "nome": "Jaqueta Imported",
+    "preco": 259.90,
+    "categoria": "jaqueta"
+  },
+  {
+    "nome": "Calça Street Cargo",
+    "preco": 199.90,
+    "categoria": "calça"
+  }
+]
