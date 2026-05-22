@@ -33,3 +33,57 @@ button{
   cursor:pointer;
   font-weight:bold;
 }
+.buttons-product{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+}
+
+.buy-btn{
+  flex:1;
+
+  padding:14px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:white;
+
+  color:black;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.buy-btn:hover{
+  transform:scale(1.03);
+}
+
+.cart-btn{
+  flex:1;
+
+  padding:14px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#1f1f1f;
+
+  color:white;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.cart-btn:hover{
+  background:#2c2c2c;
+  transform:scale(1.03);
+}

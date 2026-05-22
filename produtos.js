@@ -1,15 +1,23 @@
 const searchInput =
 document.getElementById('searchInput');
 
+const productsContainer =
+document.getElementById('productsContainer');
+
+const showAllBtn =
+document.getElementById('showAllBtn');
+
+const allCards =
+Array.from(document.querySelectorAll('.product-card'));
+
+
+
 searchInput.addEventListener('keyup', ()=>{
 
   const filter =
   searchInput.value.toLowerCase();
 
-  const cards =
-  document.querySelectorAll('.product-card');
-
-  cards.forEach(card=>{
+  allCards.forEach(card=>{
 
     const title =
     card.querySelector('h3')
@@ -25,6 +33,41 @@ searchInput.addEventListener('keyup', ()=>{
       card.style.display = 'none';
 
     }
+
+  });
+
+});
+
+
+
+allCards.forEach(card=>{
+
+  card.addEventListener('click', ()=>{
+
+    productsContainer.innerHTML = '';
+
+    const clone =
+    card.cloneNode(true);
+
+    clone.style.display = 'block';
+
+    productsContainer.appendChild(clone);
+
+  });
+
+});
+
+
+
+showAllBtn.addEventListener('click', ()=>{
+
+  productsContainer.innerHTML = '';
+
+  allCards.forEach(card=>{
+
+    card.style.display = 'block';
+
+    productsContainer.appendChild(card);
 
   });
 

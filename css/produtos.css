@@ -204,3 +204,11 @@ footer{
   background:#2c2c2c;
   transform:scale(1.03);
 }
+.product-card{
+  cursor:pointer;
+}
+
+.product-card.selected{
+  width:500px;
+  margin:auto;
+}
