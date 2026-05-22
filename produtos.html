@@ -1,157 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
 
   <title>Produtos</title>
 
-  <link rel="stylesheet" href="css/produtos.css">
+  <link rel="stylesheet"
+  href="css/produtos.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <div class="logo">
-      CENTRAL CEE
-    </div>
+  <div class="logo">
+    CENTRAL CEE
+  </div>
 
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="carrinho.html">Carrinho</a>
-      <a href="login.html">Login</a>
-    </nav>
+  <nav>
 
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Pesquisar roupa...">
-    </div>
+    <a href="index.html">
+      Início
+    </a>
 
-  </header>
-  <section class="products-section">
+    <a href="login.html">
+      Login
+    </a>
 
-    <button id="showAllBtn">
-      Mostrar Todos
+    <a href="carrinho.html" class="cart-top">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+
+
+<section class="products-section">
+
+  <div class="search-area">
+
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Pesquisar roupa...">
+
+    <button id="searchBtn">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
     </button>
 
-    <div class="title">
-      <h1>IMPORTADOS</h1>
-    </div>
-
-    <!-- CONTAINER DOS PRODUTOS -->
-    <div class="products" id="productsContainer">
-
-      <!-- PRODUTO 1 -->
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200">
-
-        <div class="product-info">
-
-          <h3>Camiseta Trapstar</h3>
-
-          <span class="price">
-            R$ 149,90
-          </span>
-
-          <div class="buttons-product">
-
-            <button class="buy-btn">
-              Comprar
-            </button>
-
-            <button class="cart-btn">
-              🛒 Carrinho
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
+  </div>
 
 
 
 
 
-      <!-- PRODUTO 2 -->
-      <div class="product-card">
+  <button id="showAllBtn">
+    Mostrar Todos
+  </button>
 
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200">
 
-        <div class="product-info">
 
-          <h3>Jaqueta Central Cee</h3>
 
-          <span class="price">
-            R$ 299,90
-          </span>
 
-          <div class="buttons-product">
+  <div class="title">
+    <h1>IMPORTADOS</h1>
+  </div>
 
-            <button class="buy-btn">
-              Comprar
-            </button>
 
-            <button class="cart-btn">
-              🛒 Carrinho
-            </button>
 
-          </div>
+
+
+  <div class="products"
+  id="productsContainer">
+
+
+
+
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200">
+
+      <div class="product-info">
+
+        <h3>Camiseta Trapstar</h3>
+
+        <span class="price">
+          R$ 149,90
+        </span>
+
+        <div class="buttons-product">
+
+          <button class="buy-btn">
+            Comprar
+          </button>
+
+          <button class="cart-btn">
+            🛒 Carrinho
+          </button>
 
         </div>
 
       </div>
 
+    </div>
 
 
 
 
-      <!-- PRODUTO 3 -->
-      <div class="product-card">
 
-        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200">
 
-        <div class="product-info">
 
-          <h3>Calça Cargo Premium</h3>
+    <div class="product-card">
 
-          <span class="price">
-            R$ 219,90
-          </span>
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200">
 
-          <div class="buttons-product">
+      <div class="product-info">
 
-            <button class="buy-btn">
-              Comprar
-            </button>
+        <h3>Jaqueta Central Cee</h3>
 
-            <button class="cart-btn">
-              🛒 Carrinho
-            </button>
+        <span class="price">
+          R$ 299,90
+        </span>
 
-          </div>
+        <div class="buttons-product">
+
+          <button class="buy-btn">
+            Comprar
+          </button>
+
+          <button class="cart-btn">
+            🛒 Carrinho
+          </button>
 
         </div>
 
+      </div>
 
     </div>
-    <!-- FIM DO CONTAINER -->
 
-  
-  </section>
 
-  <footer>
 
-    <h3>
-      Central Cee Imports © 2026
-    </h3>
 
-  </footer>
 
-  <script src="js/produtos.js"></script>
+
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200">
+
+      <div class="product-info">
+
+        <h3>Calça Cargo Premium</h3>
+
+        <span class="price">
+          R$ 219,90
+        </span>
+
+        <div class="buttons-product">
+
+          <button class="buy-btn">
+            Comprar
+          </button>
+
+          <button class="cart-btn">
+            🛒 Carrinho
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+</section>
+
+<script src="js/produtos.js"></script>
 
 </body>
-
 </html>

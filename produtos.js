@@ -1,55 +1,99 @@
 const searchInput =
-document.getElementById('searchInput');
+document.getElementById("searchInput");
+
+const searchBtn =
+document.getElementById("searchBtn");
 
 const productsContainer =
-document.getElementById('productsContainer');
+document.getElementById("productsContainer");
 
 const showAllBtn =
-document.getElementById('showAllBtn');
+document.getElementById("showAllBtn");
 
-const allCards =
-Array.from(document.querySelectorAll('.product-card'));
+const cards =
+Array.from(document.querySelectorAll(".product-card"));
 
 
 
-searchInput.addEventListener('keyup', ()=>{
+
+
+function searchProducts(){
 
   const filter =
-  searchInput.value.toLowerCase();
+  searchInput.value
+  .trim()
+  .toLowerCase();
 
-  allCards.forEach(card=>{
+
+
+
+
+  cards.forEach(card => {
 
     const title =
-    card.querySelector('h3')
+    card.querySelector("h3")
     .textContent
+    .trim()
     .toLowerCase();
+
+
+
+
 
     if(title.includes(filter)){
 
-      card.style.display = 'block';
+      card.style.display = "block";
 
     }else{
 
-      card.style.display = 'none';
+      card.style.display = "none";
 
     }
 
   });
 
-});
+}
 
 
 
-allCards.forEach(card=>{
 
-  card.addEventListener('click', ()=>{
 
-    productsContainer.innerHTML = '';
+searchBtn.addEventListener(
+"click",
+searchProducts
+);
+
+
+
+
+
+searchInput.addEventListener(
+"keyup",
+searchProducts
+);
+
+
+
+
+
+cards.forEach(card => {
+
+  card.addEventListener("click", (e)=>{
+
+    if(
+      e.target.classList.contains("buy-btn")
+      ||
+      e.target.classList.contains("cart-btn")
+    ){
+      return;
+    }
+
+    productsContainer.innerHTML = "";
 
     const clone =
     card.cloneNode(true);
 
-    clone.style.display = 'block';
+    clone.style.display = "block";
 
     productsContainer.appendChild(clone);
 
@@ -59,16 +103,26 @@ allCards.forEach(card=>{
 
 
 
-showAllBtn.addEventListener('click', ()=>{
 
-  productsContainer.innerHTML = '';
 
-  allCards.forEach(card=>{
+showAllBtn.addEventListener(
+"click",
+()=>{
 
-    card.style.display = 'block';
+  productsContainer.innerHTML = "";
+
+  cards.forEach(card => {
+
+    card.style.display = "block";
 
     productsContainer.appendChild(card);
 
   });
+
+
+
+
+
+  searchInput.value = "";
 
 });
